@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:unit="http://schemas.android.com/apk/res/com.lxdz.capacity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_new"
+    android:orientation="vertical" >
+
+    <!--
+         <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15.0dip" >
+    -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        
+        android:paddingTop="2dip"
+        android:paddingBottom="2dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/panel_green_head"
+            android:gravity="center_vertical"
+            android:paddingBottom="2dip"
+            android:paddingTop="2dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="参数设置"
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/panel_single_body"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一次电压："
+                android:textSize="@dimen/text_size_22" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/firstVoltage_noloadAll"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                unit:imeOption="actionSend"
+                unit:inputType="numberDecimal"
+                unit:unitStr="kV" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:paddingLeft="10dp"
+                android:text="二次电压："
+                android:textSize="@dimen/text_size_22" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/secondVoltage_noloadAll"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                unit:imeOption="actionSend"
+                unit:inputType="numberDecimal"
+                unit:unitStr="kV" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:paddingLeft="10dp"
+                android:text="校正系数："
+                android:textSize="@dimen/text_size_22"
+                android:visibility="gone" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/correctionCoefficent_noloadAll"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                android:layout_weight="1"
+                android:imeOptions="actionNext"
+                android:visibility="gone"
+                unit:enabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:paddingLeft="10dp"
+                android:text="额定容量："
+                android:textSize="@dimen/text_size_22" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/ratedCapacity_noloadAll"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                android:layout_weight="1"
+                unit:imeOption="actionSend"
+                unit:inputType="number"
+                unit:unitStr="kVA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/panel_single_body"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:text="变压器类型："
+                android:textSize="@dimen/text_size_22" />
+
+            <Spinner
+                android:id="@+id/transformerType_noloadAll"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionNext" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:paddingLeft="10dp"
+                android:text="联结组别："
+                android:textSize="@dimen/text_size_22" />
+
+            <Spinner
+                android:id="@+id/connectionGroup_noloadAll"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionNext" />
+
+            <TextView
+                android:id="@+id/focuschange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:duplicateParentState="true"
+                android:text="测试方法："
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/testMethod_noloadAll"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:imeOptions="actionNext" />
+        </LinearLayout>
+        </LinearLayout>
+<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:paddingTop="2dip"
+        android:paddingBottom="2dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+        
+            <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@drawable/panel_blue_head"
+            android:gravity="center_vertical"
+            android:paddingBottom="2dip"
+            android:paddingTop="2dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="测试结果"
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+        </LinearLayout>
+        
+
+        <fragment
+            android:id="@+id/noloadTest_noloadAll"
+            android:name="com.lxdz.capacity.fragment.NoloadResultPublicFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+        android:layout_weight="5" />
+        </LinearLayout>
+        
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+        android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dip" >
+        
+            <Button
+                android:id="@+id/getParam_noloadAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_config"
+                android:text="调取参数"
+                android:textSize="@dimen/text_size_22" />
+
+            <Button
+                android:id="@+id/startTest_noloadAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_config"
+                android:text="三相测试"
+                android:textSize="@dimen/text_size_22" />
+
+            <Button
+                android:id="@+id/endTest_noloadAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_config"
+                android:text="停止测试"
+                android:textSize="@dimen/text_size_22"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/save_noloadAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_config"
+                android:text="保        存"
+                android:textSize="@dimen/text_size_22" />
+
+            <Button
+                android:id="@+id/print_noloadAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_config"
+                android:text="打        印"
+                android:textSize="@dimen/text_size_22" />
+            
+                     <Button
+                    android:id="@+id/test_noloadAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_config"
+                    android:text="停止测试"
+                    android:visibility="gone"
+                    android:textSize="@dimen/text_size_22" />
+           
+        </LinearLayout>
+        <!--
+    </LinearLayout>
+    </ScrollView>
+        -->
+
+    </LinearLayout>

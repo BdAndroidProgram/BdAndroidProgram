@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:unit="http://schemas.android.com/apk/res/com.lxdz.capacity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_new"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15.0dip" >
+
+           <fragment
+        android:id="@+id/publicResult_debugAllCopy"
+        android:name="com.lxdz.capacity.fragment.PublicReturnFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/panel_light_blue"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="角度"
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/panel_single_body"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="Pa:"
+                        android:textSize="@dimen/text_size_22" />
+
+                    <com.lxdz.capacity.widget.UnitView
+                        android:id="@+id/ja_debugAllCopy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1"
+                        android:imeOptions="actionNext"
+                        android:textSize="@dimen/text_size_20"
+                        unit:textColor="@color/orange"
+                        unit:unitStr="°" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="Pb:"
+                        android:textSize="@dimen/text_size_22" />
+
+                    <com.lxdz.capacity.widget.UnitView
+                        android:id="@+id/jb_debugAllCopy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1"
+                        android:imeOptions="actionNext"
+                        android:textSize="@dimen/text_size_20"
+                        unit:textColor="@color/yellow"
+                        unit:unitStr="°" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="Pc:"
+                        android:textSize="@dimen/text_size_22" />
+
+                    <com.lxdz.capacity.widget.UnitView
+                        android:id="@+id/jc_debugAllCopy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1"
+                        android:imeOptions="actionNext"
+                        android:textSize="@dimen/text_size_20"
+                        unit:textColor="@color/yellow"
+                        unit:unitStr="°" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/panel_blue_head"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:paddingLeft="10dp"
+                        android:text="项目选择:"
+                        android:textSize="@dimen/text_size_22" />
+
+                    <Spinner
+                        android:id="@+id/debugProject_debugAllCopy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                   
+                </LinearLayout>
+            </LinearLayout>
+            
+     <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/panel_single_body"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="测试项"
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_single_body"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dip" >
+                <RadioGroup 
+                    android:id="@+id/debugClass_debugAllCopy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    
+                    <RadioButton
+                        android:id="@+id/uaBtn_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="Ua"
+	                    android:textSize="@dimen/text_size_22"
+                        android:padding="5dip"
+                        android:gravity="center"
+                        android:button="@null"
+                         android:background="@drawable/radiobutton_config"
+                         />
+                    <RadioButton
+                        android:id="@+id/ubBtn_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="Ub"
+	                    android:textSize="@dimen/text_size_22"
+                       android:padding="5dip"
+                        android:gravity="center"
+                        android:background="@drawable/radiobutton_config"
+                        android:button="@null"
+                         />
+                    <RadioButton
+                        android:id="@+id/ucBtn_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="Uc"
+	                    android:textSize="@dimen/text_size_22"
+                       android:padding="5dip"
+                        android:gravity="center"
+                        android:background="@drawable/radiobutton_config"
+                        android:button="@null"
+                         />
+                    <RadioButton
+                        android:id="@+id/iaBtn_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="Ia"
+	                    android:textSize="@dimen/text_size_22"
+                       android:padding="5dip"
+                        android:gravity="center"
+                        android:button="@null"
+                         android:background="@drawable/radiobutton_config"
+                         />
+                    <RadioButton
+                        android:id="@+id/ibBtn_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="Ib"
+	                    android:textSize="@dimen/text_size_22"
+                       android:padding="5dip"
+                        android:gravity="center"
+                        android:background="@drawable/radiobutton_config"
+                        android:button="@null"
+                         />
+                    <RadioButton
+                        android:id="@+id/icBtn_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="Ic"
+	                    android:textSize="@dimen/text_size_22"
+                       android:padding="5dip"
+                        android:gravity="center"
+                        android:background="@drawable/radiobutton_config"
+                        android:button="@null"
+                         />
+                    <RadioButton
+                        android:id="@+id/jaBtn_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="Ja"
+	                    android:textSize="@dimen/text_size_22"
+                        android:button="@null"
+                         android:background="@drawable/radiobutton_config"
+                         android:padding="5dip"
+                        android:gravity="center"
+                         />
+                    <RadioButton
+                        android:id="@+id/jbBtn_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="Jb"
+	                    android:textSize="@dimen/text_size_22"
+                       android:padding="5dip"
+                        android:gravity="center"
+                        android:background="@drawable/radiobutton_config"
+                        android:button="@null"
+                         />
+                    <RadioButton
+                        android:id="@+id/jcBtn_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="Jc"
+	                    android:textSize="@dimen/text_size_22"
+                       android:padding="5dip"
+                        android:gravity="center"
+                        android:background="@drawable/radiobutton_config"
+                        android:button="@null"
+                         />
+                </RadioGroup>
+
+            
+            </LinearLayout>
+            
+            
+            
+            <LinearLayout
+                android:id="@+id/gearPanel_debugAllCopy"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_single_body"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:padding="5dip" >
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/panel_single_body"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="档位选择"
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <RadioGroup 
+                    android:id="@+id/debugGear_debugAllCopy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+                    
+                    <RadioButton
+                        android:id="@+id/percent100_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="100%"
+	                    android:textSize="@dimen/text_size_22"
+                       android:padding="5dip"
+                        android:gravity="center"
+                        android:button="@null"
+                         android:background="@drawable/radiobutton_config"
+                         />
+                    <RadioButton
+                        android:id="@+id/percent10_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="10%"
+	                    android:textSize="@dimen/text_size_22"
+                       android:padding="5dip"
+                        android:gravity="center"
+                        android:background="@drawable/radiobutton_config"
+                        android:button="@null"
+                         />
+                    <RadioButton
+                        android:id="@+id/percent5_debugAllCopy"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginRight="10dip"
+	                    android:layout_weight="1"
+	                    android:text="5%"
+	                    android:textSize="@dimen/text_size_22"
+                       android:padding="5dip"
+                        android:gravity="center"
+                        android:background="@drawable/radiobutton_config"
+                        android:button="@null"
+                         />
+                </RadioGroup>
+
+            
+            </LinearLayout>
+
+           
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_single_body"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10% "
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/up10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/up_config" />
+
+                    <Button
+                        android:id="@+id/down10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/down_config" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/switch_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 1%   "
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/up1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/up_config" />
+
+                    <Button
+                        android:id="@+id/down1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/down_config" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/switch_line"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_single_body"
+                android:baselineAligned="false"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.1%"
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/up01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/up_config" />
+
+                    <Button
+                        android:id="@+id/down01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/down_config" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/switch_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.01% "
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/up001"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/up_config" />
+
+                    <Button
+                        android:id="@+id/down001"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/down_config" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dip" >
+
+                <Button
+                    android:id="@+id/saveVoltage_debugAllCopy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/btn_config"
+                    android:text="电压保存"
+                    android:textSize="@dimen/text_size_22" />
+
+                <Button
+                    android:id="@+id/saveCurrent_debugAllCopy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/btn_config"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:text="电流保存"
+                    android:textSize="@dimen/text_size_22" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

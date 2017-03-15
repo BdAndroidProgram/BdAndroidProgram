@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:unit="http://schemas.android.com/apk/res/com.lxdz.capacity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- <fragment
+        android:id="@+id/publicResult_loadPublic"
+        android:name="com.lxdz.capacity.fragment.PublicReturnFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /> -->
+
+	<FrameLayout
+        android:id="@+id/publicResult_loadPublic"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="3" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1" 
+        android:background="@drawable/panel_single_body"
+        android:orientation="horizontal"
+        android:paddingTop="2dip"
+        android:paddingBottom="2dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:duplicateParentState="true"
+            android:text="实测负载损耗:"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/trueLoadLoss_loadPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            unit:enabled="false"
+            android:textSize="@dimen/text_size_20"
+            unit:unitStr="W" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:duplicateParentState="true"
+            android:text="校正负载损耗:"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/correctionLoadLoss_loadPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            unit:enabled="false"
+            android:textSize="@dimen/text_size_20"
+            unit:unitStr="W" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:layout_marginLeft="10.0dip"
+            android:text="短路阻抗:"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/shortCircuitImpedance_loadPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10.0dip"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            unit:enabled="false"
+            android:textSize="@dimen/text_size_20" 
+            unit:unitStr="%" />
+    </LinearLayout>
+
+</LinearLayout>

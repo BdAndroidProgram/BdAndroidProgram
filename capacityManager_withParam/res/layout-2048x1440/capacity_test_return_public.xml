@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:unit="http://schemas.android.com/apk/res/com.lxdz.capacity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!--
+         <fragment
+        android:id="@+id/publicResult_capacityAll"
+        android:name="com.lxdz.capacity.fragment.PublicReturnFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    -->
+
+    <FrameLayout
+        android:id="@+id/publicResult_capacityAll"
+        android:layout_width="wrap_content"
+         android:layout_height="0dip"
+        android:layout_weight="3" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/capacityResult1"
+        android:layout_width="fill_parent"
+         android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@drawable/panel_single_body"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingTop="5dip"
+        android:paddingLeft="10dip"
+        android:paddingBottom="2dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:text="国标损耗 :"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/nationalLoss_capacityAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_20"
+            unit:enabled="false"
+            unit:inputType="number"
+            unit:unitStr="kW" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:layout_marginLeft="10dip"
+            android:text="判定容量 :"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/deteminCapacity_capacityAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_20"
+            unit:enabled="false"
+            unit:inputType="number"
+            unit:textColor="@color/orange"
+            unit:unitStr="kVA" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:layout_marginLeft="10dip"
+            android:text="阻抗电压 :"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/impedanceVoltageReturn_capacityAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_20"
+            unit:enabled="false"
+            unit:inputType="number"
+            unit:textColor="@color/orange"
+            unit:unitStr="%" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/capacityResult2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@drawable/panel_single_body"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingLeft="10dip"
+        android:paddingBottom="2dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:text="负载损耗 :"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/loadLoss_capacityAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_20"
+            unit:enabled="false"
+            unit:inputType="number"
+            unit:textColor="@color/orange"
+            unit:unitStr="kW" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:layout_marginLeft="10dip"
+            android:text="实测容量 :"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/trueCapacity_capacityAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_20"
+            unit:enabled="false"
+            unit:inputType="number"
+            unit:textColor="@color/blue"
+            unit:unitStr="kVA" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:layout_marginLeft="10dip"
+            android:text="校正阻抗:"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/correctionImpedance_capacityAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_20"
+            unit:enabled="false"
+            unit:inputType="number"
+            unit:unitStr="%" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/capacityResult3"
+        android:layout_width="fill_parent"
+         android:layout_height="0dip"
+        android:layout_weight="1.5"
+        android:background="@drawable/panel_single_body"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingLeft="10dip"
+        android:paddingBottom="2dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:text="校正损耗 :"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/correctionLoss_capacityAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_20"
+            unit:enabled="false"
+            unit:inputType="number"
+            unit:textColor="@color/orange"
+            unit:unitStr="kW" />
+
+        <TextView
+            android:id="@+id/returnTransformerLabel_capacityAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:layout_marginLeft="20dip"
+            android:text="判定变压类型 :"
+            android:textSize="@dimen/text_size_22" />
+
+        <Spinner
+            android:id="@+id/deteminTransformerType_capacityAll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:imeOptions="actionNext" />
+    </LinearLayout>
+
+</LinearLayout>

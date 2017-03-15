@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:unit="http://schemas.android.com/apk/res/com.lxdz.capacity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- <fragment
+        android:id="@+id/publicResult_noloadPublic"
+        android:name="com.lxdz.capacity.fragment.PublicReturnFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /> -->
+        <FrameLayout
+        android:id="@+id/publicResult_noloadPublic"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip" 
+        android:layout_weight="3.5"/>
+
+    <LinearLayout
+        android:id="@+id/result1_noloadAll"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip" 
+        android:layout_weight="1"
+        android:background="@drawable/panel_single_body"
+        android:orientation="horizontal"
+        android:padding="2dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:duplicateParentState="true"
+            android:text="      空载电流 :"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/noloadCurrent_noloadPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            unit:enabled="false"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_20" 
+            unit:unitStr="%" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:duplicateParentState="true"
+            android:text="实测空载损耗:"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/trueNoloadLoss_noloadPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            unit:enabled="false"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_20"
+            unit:unitStr="W" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/result2_noloadAll"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip" 
+        android:layout_weight="1.5"
+        android:background="@drawable/panel_single_body"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:text="校正空载损耗:"
+            android:textSize="@dimen/text_size_22" />
+
+        <com.lxdz.capacity.widget.UnitView
+            android:id="@+id/correctionNoloadLoss_noloadPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/text_size_20"
+            unit:enabled="false"
+            unit:inputType="number"
+            unit:textColor="@color/orange"
+            unit:unitStr="W" />
+
+        <TextView
+            android:id="@+id/returnTransformerLabel_capacityAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:layout_marginLeft="20.0dip"
+            android:text="判定变压类型:"
+            android:textSize="@dimen/text_size_22" />
+
+        <Spinner
+            android:id="@+id/deteminTransformerType_noloadPublic"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:layout_weight="1"
+            android:imeOptions="actionNext" />
+    </LinearLayout>
+
+
+</LinearLayout>

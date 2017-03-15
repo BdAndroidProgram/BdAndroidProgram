@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LCT-CY305变压器容量测试仪</string>
+    <string name="action_settings">Settings</string>
+    <string name="refreshing">refreshing</string>
+    <string name="transferData">transferData</string>
+    <string name="controlNum">please input control number</string>
+    <string name="dataNum">please input data number</string>
+    
+    <!-- 菜单配置开始 -->
+    <string name="infoMenu">电表管理</string>
+    <string name="dataAcquiredMenu">数据采集</string>
+    <string name="dataAnalysisMenu">数据分析</string>
+    <string name="systemManagerMenu">系统管理</string>
+    <string name="dataConfigMenu">数据配置</string>
+    
+    <!-- 菜单配置结束 -->
+    
+    <!-- 工具栏开始 -->
+    <string name="addTools">添加</string>
+    <string name="editTools">修改</string>
+    <string name="searchTools">查询</string>
+    <string name="searchText">请输入用户姓名</string>
+    <string name="deleteTools">删除</string>
+    <!-- 工具栏结束 -->
+    
+    <!-- 电表信息输入配置开始 -->
+    <string name="allElectric">全部电能表 </string>
+    <string name="electricNumber">电表编号： </string>
+    <string name="userName">用户名： </string>
+    <string name="phone">联系方式：</string>
+    <string name="adress">住址：</string>
+    
+    <string name="electricAdress">电表地址： </string>
+    <string name="protocal">所用规约：： </string>
+    <string name="protocalRate">波特率：</string>
+    <string name="checkType">校验方式：</string>
+    <string name="dataLength">数据长度：</string>
+    <string name="checkTypeLength">校验位长度：</string>
+    
+    
+    <!-- 电表信息输入配置结束 -->
+
+</resources>

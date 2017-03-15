@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 电表制式 -->
+    <string-array name="electricTypeArray"> 
+        <item>三相四线有功</item> 
+        <item>三相四线无功</item> 
+        <item>三相三线有功</item>
+        <item>三相三线无功</item>  
+    </string-array>
+   
+    <!-- 电压量程 -->
+    <string-array name="voltageRangeArray"> 
+        <item>380V</item> 
+        <item>220V</item> 
+        <item>100V</item>
+        <item>57.7V</item>  
+    </string-array> 
+    
+    <!-- 电流量程 -->
+    <string-array name="electricRangeArray"> 
+        <item>5A</item> 
+
+    </string-array>
+    
+    <!-- 电压范围-->
+    <string-array name="ratedVoltageHighArray"> 
+        <item>高10kV</item>
+        <item>高35kV</item> 
+        <item>SC干10kV</item> 
+        <item>SG干10kV</item>
+        <item>SC干35kV</item>
+        <item>其他</item>  
+    </string-array> 
+    
+    <!-- 联结组别 -->
+    <string-array name="connectionGroupArray"> 
+        <item>Yyn0</item> 
+        <item>Dyn11</item> 
+        <item>Yzn11</item>
+        <item>Yd11</item>
+        <item>YNd11</item>  
+    </string-array> 
+    
+    <!-- 测试方法 -->
+    <string-array name="testMethodArray"> 
+        <item>单相测试</item> 
+        <item>三线测试</item> 
+        <item>四线测试</item>  
+        <item>请选择测试方法</item>  
+    </string-array>
+    
+    <string-array name="testMethodArrayLoad"> 
+        <item>三线测试</item> 
+        <item>四线测试</item>  
+        <item>请选择测试方法</item>  
+    </string-array>
+    
+    
+    <string-array name="csff1Array"> 
+        <item>四线测试</item>  
+    </string-array>
+    
+    <!-- 变压类型 -->
+    <string-array name="transformerTypeArray"> 
+        <item>油浸式</item> 
+        <item>干式</item> 
+    </string-array> 
+    
+    <!-- 容量变压器类型 -->
+    <string-array name="capacityTransformerTypeArray"> 
+        <item>S9/S11配变</item> 
+        <item>S13配变</item> 
+        <item>S15配变</item> 
+        <item>S9/S11电变</item> 
+        <item>干式变压器</item> 
+        <item>非标变压器</item> 
+    </string-array> 
+    
+    <!-- 空载变压器类型 -->
+    <string-array name="noloadTransformerTypeArray"> 
+        <item>10KV配变</item> 
+        <item>35KV配变</item> 
+        <item>SC(干)10KV</item> 
+        <item>SG(干)10KV</item> 
+        <item>SC(干)35KV</item> 
+        <item>其他</item> 
+    </string-array> 
+    
+    <!-- 分接档位 -->
+    <string-array name="tapGearArray"> 
+        <item>1档</item> 
+        <item>2档</item> 
+        <item>3档</item>
+        <item>4档</item> 
+        <item>5档</item>
+    </string-array>
+    
+    
+    <string-array name="dwxzArray"> 
+        <item>低档</item> 
+        <item>高档</item> 
+    </string-array> 
+    <!-- 查询条件 -->
+       <string-array name="searchCondition"> 
+        <item>请选择</item>
+        <item>变压器编号</item> 
+        <item>用户名称</item>
+        <item>用户地址</item>
+        <item>测试员</item> 
+    </string-array> 
+    <string-array name="rltx"> 
+        <item>容量</item> 
+        <item>特性</item> 
+    </string-array> 
+    <string-array name="tjsz"> 
+        <item>等于</item> 
+        <item>大于</item> 
+        <item>大于等于</item>
+        <item>小于</item>
+        <item>小于等于</item>  
+    </string-array> 
+    <string-array name="login"> 
+        <item>设备调试员</item>          
+    </string-array>
+    <string-array name="mcbl"> 
+        <item>×1</item>
+        <item>×10</item>           
+    </string-array>
+    
+    
+    <!-- 调试项目 -->
+       <string-array name="debugProject"> 
+        <item>请选择</item>
+        <item>容量</item> 
+        <item>空载</item>
+    </string-array> 
+    
+    <!-- 调试类别-->
+    <string-array name="debugClass"> 
+        <item>请选择</item>
+        <item>Ua</item>
+        <item>Ub</item>
+        <item>Uc</item>
+        <item>Ia</item>
+        <item>Ib</item>
+        <item>Ic</item>
+        <item>Ja</item>
+        <item>Jb</item>
+        <item>Jc</item>
+    </string-array>
+    
+    <!-- 调试档位 -->
+    <string-array name="debugGear"> 
+        <item>请选择</item>
+        <item>100%</item>
+        <item>10%</item>
+        <item>5%</item>
+    </string-array>
+    
+        <!-- 容量测试界面，判定变压类型 -->
+    <string-array name="capacityType_capacity"> 
+        <item>无</item>
+        <item>S9/S11</item>
+        <item>S9</item>
+    </string-array>
+    
+     <!-- 空载测试界面，判定变压类型 -->
+    <string-array name="capacityType_noload"> 
+        
+        <item>S15</item>
+        <item>S13</item>
+        <item>S11</item>
+        <item>S9</item>
+        <item>S9</item>
+        <item>SC-S10型</item>
+        <item>SC-S9型</item>
+        <item>SC-S8型</item>
+        <item>SC-S7型</item>
+       <item>SG-S10型</item>
+        <item>SG-S9型</item>
+        <item>SG-S8型</item>
+        <item>SG-S7型</item>
+        <item>无</item>
+    </string-array>
+    
+</resources>

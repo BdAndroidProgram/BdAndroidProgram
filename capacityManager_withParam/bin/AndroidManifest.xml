@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lxdz.capacity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+
+    <uses-feature android:name="android.hardware.usb.host" />
+    <!-- 以下是使用wifi访问网络所需的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- 开机自启权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:name=".activity.MainApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/sys_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <!-- <receiver android:name="com.lxdz.capacity.socket.NewDataReceiver" >
+            <intent-filter>
+                <action android:name="com.lxdz.capacity.socket.OnParamReceive" >
+                </action>
+            </intent-filter>
+        </receiver> -->
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.IndexActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+              >
+        </activity>
+        
+        <!-- android:screenOrientation="portrait" -->
+
+        <activity
+            android:name=".activity.DataDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+             >
+        </activity>
+        
+        <service android:name="com.lxdz.capacity.socket.SocketClient" >
+        </service>
+        <receiver android:name="com.lxdz.capacity.activity.BootBroadcastReceiver" >
+      		<intent-filter>
+        		<action android:name="android.intent.action.BOOT_COMPLETED" />
+        		<category android:name="android.intent.category.HOME" />
+      		</intent-filter>
+		</receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_new"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="5dip"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/head"
+            layout="@layout/transformer_header" />
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null" >
+
+            <requestFocus />
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="3"
+        android:orientation="horizontal" 
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="5dip"
+            android:layout_weight="1.5"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_green_head"
+                android:gravity="center_vertical"
+                android:paddingBottom="2dip"
+                android:paddingTop="2dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="查询条件"
+                    android:textSize="@dimen/text_size_22"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_single_body"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="2dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间："
+                    android:textSize="@dimen/text_size_20"
+                    android:textStyle="bold" />
+
+                <com.lxdz.capacity.widget.DataInputLayout
+                    android:id="@+id/startDate_managerAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_single_body"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="2dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束时间："
+                    android:textSize="@dimen/text_size_20"
+                    android:textStyle="bold" />
+
+                <com.lxdz.capacity.widget.DataInputLayout
+                    android:id="@+id/endDate_managerAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_single_body"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="2dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="条件字段："
+                    android:textSize="@dimen/text_size_20"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/searchField_managerAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:prompt="@string/allElectric"
+                    android:textSize="@dimen/text_size_18" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_single_body"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="2dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查询条件："
+                    android:textSize="@dimen/text_size_20"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/searchCondition_managerAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:duplicateParentState="false"
+                    android:imeOptions="actionNext"
+                    android:paddingLeft="10dp"
+                    android:textSize="@dimen/text_size_20" />
+            </LinearLayout>
+            
+             <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_single_body"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="2dip" >
+
+                <Button
+                    android:id="@+id/search_managerAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_config"
+                    android:text="查询"
+                    android:textSize="@dimen/text_size_22" />
+                
+                <Button
+                    android:id="@+id/print_managerAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_config"
+                    android:layout_marginLeft="10dip"
+                    android:text="打印"
+                    android:textSize="@dimen/text_size_22" />
+                <Button
+                    android:id="@+id/delete_managerAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_config"
+                    android:layout_marginLeft="10dip"
+                    android:text="删除"
+                    android:textSize="@dimen/text_size_22" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_single_body"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="2dip"
+                android:paddingTop="5dip" >
+
+               
+
+                
+
+                <Button
+                    android:id="@+id/save_managerAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_config"
+                    android:text="保存"
+                    android:textSize="@dimen/text_size_22"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/close_managerAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_config"
+                    android:text="关闭"
+                    android:textSize="@dimen/text_size_22"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TabHost
+            android:id="@+id/dataDesc_managerAll"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:layout_weight="5" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:fadingEdge="none"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical" >
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:paddingTop="5dp"
+                         >
+
+                        <fragment
+                            android:id="@+id/transformer_detail"
+                            android:name="com.lxdz.capacity.fragment.ParamSettingFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <fragment
+                            android:id="@+id/capacity_loadAll"
+                            android:name="com.lxdz.capacity.fragment.CapacityResultPublicFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <fragment
+                            android:id="@+id/load_loadAll"
+                            android:name="com.lxdz.capacity.fragment.LoadResultPublicFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <fragment
+                            android:id="@+id/noload_loadAll"
+                            android:name="com.lxdz.capacity.fragment.NoloadResultPublicFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+                </ScrollView>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+</LinearLayout>

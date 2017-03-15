@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusable="true"  
+   android:focusableInTouchMode="true"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/dataValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext"
+        android:minEms="4"
+        android:text=""
+		android:singleLine="true"
+		android:gravity="center"
+        android:paddingRight="25dip"
+        
+        android:inputType="numberDecimal"
+        android:textSize="@dimen/text_size_22"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dataUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/dataValue"
+        android:gravity="bottom"
+        android:paddingTop="5dip"
+        android:layout_marginRight="5dip"
+        android:textSize="@dimen/text_size_22"
+         />
+
+</RelativeLayout>

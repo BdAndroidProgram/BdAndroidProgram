@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:unit="http://schemas.android.com/apk/res/com.lxdz.capacity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_new"
+    android:orientation="vertical" >
+
+    <!--
+         <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+    -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:orientation="vertical"
+        android:layout_weight="3"
+        android:padding="2.0dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:background="@drawable/panel_green_head"
+            android:gravity="center_vertical"
+            android:paddingTop="2dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="参数设置"
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/panel_single_body"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="2dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:paddingLeft="10dp"
+                    android:text="额定容量："
+                    android:textSize="@dimen/text_size_22" />
+
+                <com.lxdz.capacity.widget.UnitView
+                    android:id="@+id/ratedCapacity_loadAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_weight="1"
+                    android:imeOptions="actionNext"
+                    android:textSize="@dimen/text_size_20"
+                    unit:inputType="number"
+                    unit:unitStr="kVA" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:paddingLeft="10dp"
+                    android:text="一次电压："
+                    android:textSize="@dimen/text_size_22" />
+
+                <com.lxdz.capacity.widget.UnitView
+                    android:id="@+id/firstVoltage_loadAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_size_20"
+                    unit:imeOption="actionSend"
+                	unit:inputType="numberDecimal"
+                    unit:unitStr="kV" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:duplicateParentState="true"
+                    android:text="当前温度："
+                    android:textSize="@dimen/text_size_22" />
+
+                <com.lxdz.capacity.widget.UnitView
+                    android:id="@+id/currentTemperature_loadAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_size_20"
+                    unit:imeOption="actionSend"
+                    unit:inputType="number"
+                    unit:unitStr="℃" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.4"
+                android:background="@drawable/panel_single_body"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="2dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="变压器类型："
+                    android:textSize="@dimen/text_size_22"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/transformerType_loadAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:imeOptions="actionNext"
+                    android:textSize="@dimen/text_size_22"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:duplicateParentState="true"
+                    android:text="联接组别："
+                    android:textSize="@dimen/text_size_22"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/connectionGroup_loadAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:imeOptions="actionNext" />
+
+                <TextView
+                    android:id="@+id/focuschange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:duplicateParentState="true"
+                    android:text="测试方法："
+                    android:textSize="@dimen/text_size_22"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/testMethod_loadAll"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:imeOptions="actionNext" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+            android:layout_weight="1"
+                android:background="@drawable/panel_blue_head"
+                android:gravity="center_vertical"
+                android:paddingBottom="3dip"
+                android:paddingTop="3dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingLeft="10dp"
+                    android:text="测试结果"
+                    android:textSize="@dimen/text_size_22"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <fragment
+                android:id="@+id/loadTest_loadAll"
+                android:name="com.lxdz.capacity.fragment.LoadResultPublicFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                
+            android:layout_weight="5" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.6"
+        
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+        
+        <Button
+            android:id="@+id/getParam_loadAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_config"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="调取参数"
+            android:textSize="@dimen/text_size_22" />
+
+        <Button
+            android:id="@+id/beginTest_loadAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_config"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="三相测试"
+            android:textSize="@dimen/text_size_22" />
+
+        <Button
+            android:id="@+id/save_loadAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_config"
+            android:text="保        存"
+            android:textSize="@dimen/text_size_22" />
+
+        <Button
+            android:id="@+id/print_loadAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_config"
+            android:visibility="gone"
+            android:text="打印"
+            android:textSize="@dimen/text_size_22" />
+    </LinearLayout>
+
+<!-- </ScrollView> -->
+
+<!-- <LinearLayout> -->
+
+</LinearLayout>

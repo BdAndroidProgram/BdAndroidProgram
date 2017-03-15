@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:unit="http://schemas.android.com/apk/res/com.lxdz.capacity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="0dip">
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+       
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:paddingTop="1dip"
+            android:background="@drawable/panel_single_body"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/uaLabel_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:duplicateParentState="true"
+                android:text="Uab ："
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/ua_public_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_20"
+                unit:enabled="false"
+                unit:inputType="number"
+                
+                unit:textColor="@color/orange"
+                unit:unitStr="V" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ubLinear_noloadAndLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@drawable/panel_single_body"
+            android:paddingTop="1dip"
+            android:visibility="gone"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/ubLabel_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:duplicateParentState="true"
+                android:text="Ub ："
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/ub_public_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_20"
+                unit:enabled="false"
+                unit:inputType="number"
+                unit:textColor="@color/green"
+                unit:unitStr="V" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ucLinear_noloadAndLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@drawable/panel_single_body"
+            android:paddingTop="1dip"
+            android:paddingBottom="1dip"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/ucLabel_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:duplicateParentState="true"
+                android:text="Ucb ："
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/uc_public_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_20"
+                unit:enabled="false"
+                unit:inputType="number"
+                unit:textColor="@color/red"
+                unit:unitStr="V" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="20dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+        android:layout_weight="1"
+            android:background="@drawable/panel_single_body"
+            android:paddingTop="1dip"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/iaLabel_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:duplicateParentState="true"
+                android:text="Iab："
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/ia_public_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_20"
+                unit:enabled="false"
+                unit:inputType="number"
+                unit:textColor="@color/orange"
+                unit:unitStr="A" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ibLinear_noloadAndLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+        android:layout_weight="1"
+            android:background="@drawable/panel_single_body"
+            android:paddingTop="1dip"
+            android:visibility="gone"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/ibLabel_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:duplicateParentState="true"
+                android:text="Ib："
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/ib_public_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_20"
+                unit:enabled="false"
+                unit:inputType="number"
+                unit:textColor="@color/green"
+                unit:unitStr="A" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/icLinear_noloadAndLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+        android:layout_weight="1"
+            android:background="@drawable/panel_single_body"
+            android:paddingTop="1dip"
+            android:paddingBottom="1dip"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/icLabel_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:duplicateParentState="true"
+                android:text="Icb："
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/ic_public_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_20"
+                unit:enabled="false"
+                unit:inputType="number"
+                unit:textColor="@color/red"
+                unit:unitStr="A" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+        android:layout_weight="1"
+            android:background="@drawable/panel_single_body"
+            android:paddingTop="1dip"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/paLabel_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:duplicateParentState="true"
+                android:text="Pab："
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/pa_public_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_20"
+                unit:enabled="false"
+                unit:inputType="number"
+                unit:textColor="@color/orange"
+                unit:unitStr="W" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pbLinear_noloadAndLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+        android:layout_weight="1"
+            android:background="@drawable/panel_single_body"
+            android:paddingTop="1dip"
+            android:visibility="gone"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/pbLabel_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:duplicateParentState="true"
+                android:text="Pb ："
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/pb_public_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_20"
+                unit:enabled="false"
+                unit:inputType="number"
+                unit:textColor="@color/green"
+                unit:unitStr="W" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pcLinear_noloadAndLoad"
+            android:layout_width="wrap_content"
+             android:layout_height="0dip"
+        android:layout_weight="1"
+            android:background="@drawable/panel_single_body"
+            android:paddingTop="1dip"
+            android:paddingBottom="1dip"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/pcLabel_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:duplicateParentState="true"
+                android:text="Pcb ："
+                android:textSize="@dimen/text_size_22"
+                android:textStyle="bold" />
+
+            <com.lxdz.capacity.widget.UnitView
+                android:id="@+id/pc_public_noloadAndLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                
+                android:imeOptions="actionNext"
+                android:textSize="@dimen/text_size_20"
+                unit:enabled="false"
+                unit:inputType="number"
+                unit:textColor="@color/red"
+                unit:unitStr="W" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

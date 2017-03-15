@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:unit="http://schemas.android.com/apk/res/com.lxdz.capacity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_new"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="15.0dip"
+            android:paddingRight="10dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_green_head"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="参数设置"
+                    android:textSize="@dimen/text_size_22"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/panel_single_body"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="5dip" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:duplicateParentState="true"
+                        android:text="变压器编号："
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/transformerId_base"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:maxLength="4"
+                                             
+                        android:singleLine="true"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/transformerCode_base"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext"
+                        android:duplicateParentState="false"
+                        android:gravity="center"
+                        android:imeOptions="actionSend"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:singleLine="true"
+                        android:textColor="@color/author_text"
+                        android:textSize="@dimen/text_size_20" >
+
+                        <requestFocus />
+                   </EditText>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:duplicateParentState="true"
+                        android:text="测试员："
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/testUser_base"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext"
+                        android:duplicateParentState="false"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textColor="@color/author_text"
+                        android:textSize="@dimen/text_size_20"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:duplicateParentState="true"
+                        android:text="    用户名称："
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/username_base"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext"
+                        android:duplicateParentState="false"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textColor="@color/author_text"
+                        android:textSize="@dimen/text_size_20" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8.0dip"
+                        android:duplicateParentState="true"
+                        android:text="用户地址："
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+                    
+                    <EditText
+                        android:id="@+id/userAddress_base"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext"
+                        android:duplicateParentState="false"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textColor="@color/author_text"
+                        android:textSize="@dimen/text_size_20"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dip"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="测试员："
+                        android:textSize="@dimen/text_size_22" />
+
+                    <Spinner
+                        android:id="@+id/testSpinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/panel_light_blue"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:text="初始化设置"
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/panel_single_body"
+                    android:gravity="center_vertical"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:duplicateParentState="true"
+                        android:text="热点名称："
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/wifiName_base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textColor="@color/author_text"
+                        android:textSize="@dimen/text_size_20"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/password_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:duplicateParentState="true"
+                        android:text="密        码："
+                        android:textSize="@dimen/text_size_22"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/password_base"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textColor="@color/author_text"
+                        android:textSize="@dimen/text_size_20"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/saveData_base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/btn_config"
+                android:text="保存 "
+                android:textSize="@dimen/text_size_22" />
+
+            <Button
+                android:id="@+id/testSpinnerBtn_base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/btn_config"
+                android:text="测试 "
+                android:textSize="@dimen/text_size_22"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

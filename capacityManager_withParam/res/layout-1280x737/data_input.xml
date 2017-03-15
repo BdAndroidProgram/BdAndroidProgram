@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:orientation="horizontal">
+     
+     <EditText
+                android:id="@+id/dataText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_20"
+                android:background="@drawable/bg_edittext" 
+                android:textStyle="bold" 
+                android:focusable="false"
+                android:ems="7"
+                
+                />
+                
+     <!-- android:background="@drawable/calandar_config" -->
+            <Button
+                android:id="@+id/dataBtn"
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:gravity="center"
+                android:background="@drawable/calandar_config" 
+                android:layout_alignRight="@id/dataText"
+                
+               
+                 />
+    
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- 按钮按下时显示bg_pressed图片 -->
+    <item 
+        android:state_checked="true" 
+        android:drawable="@drawable/btn_red_press"/>
+    
+    <!-- 按钮抬起的时候显示bg_normal图片 -->
+    <item 
+        android:state_checked="false" 
+        android:drawable="@drawable/btn_red_normal"/>
+
+    
+
+</selector>
+
